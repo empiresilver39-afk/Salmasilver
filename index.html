@@ -1,0 +1,262 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#170b16">
+<title>خليني ذكرى جميلة عندك ❤️</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+ background:#170b16;color:white;
+ font-family:Tahoma,Arial,sans-serif;
+ overflow-x:hidden;
+}
+#site{display:none}
+
+/* شاشة الباسورد */
+#lock{
+ position:fixed;inset:0;z-index:1000;
+ display:flex;align-items:center;justify-content:center;
+ text-align:center;padding:25px;
+ background:linear-gradient(#190b19bb,#190b19ee),
+ url('https://i.ibb.co/ycYt7Zxf/IMG-7688.jpg') center/cover;
+}
+.lockbox{
+ width:100%;max-width:380px;
+ padding:38px 24px;border-radius:25px;
+ background:#241321d9;
+ border:1px solid #e9a5c266;
+ box-shadow:0 0 45px #e77ba744;
+ backdrop-filter:blur(12px);
+}
+.lockbox .heart{font-size:48px;color:#f3a9c7}
+.lockbox h1{color:#ffd5e5;font-size:28px;margin:18px 0}
+.lockbox p{color:#f5dce7;line-height:2}
+#pass{
+ display:block;width:100%;margin-top:25px;
+ padding:16px;border-radius:30px;
+ border:1px solid #e7a0bd;
+ background:#160d17;color:white;
+ text-align:center;font-size:23px;
+ letter-spacing:10px;outline:none;
+}
+#unlock{
+ width:100%;padding:15px;margin-top:18px;
+ border:0;border-radius:30px;
+ background:#b34c79;color:white;
+ font-size:17px;cursor:pointer;
+}
+#error{color:#ff9db9;margin-top:15px;display:none}
+
+/* الموقع */
+.hero{
+ min-height:100vh;position:relative;
+ display:flex;align-items:center;justify-content:center;
+ text-align:center;padding:30px 20px;
+ background:
+ linear-gradient(#14051299,#140512d9),
+ url('https://i.ibb.co/ycYt7Zxf/IMG-7688.jpg') center/cover fixed;
+}
+.hero-content{max-width:650px;animation:fade 2s}
+.small{color:#f5b4ce;letter-spacing:3px;font-size:13px}
+h1{font-size:clamp(30px,7vw,54px);margin:22px 0;color:#ffd6e5}
+.hero p{font-size:18px;line-height:2.2;color:#fff0f5}
+.line{width:75px;height:2px;background:#ed9cbd;margin:25px auto}
+button{
+ border:1px solid #f4b2cf;
+ background:#b34c79;color:white;
+ padding:15px 32px;border-radius:35px;
+ font-size:16px;margin-top:25px;cursor:pointer;
+ box-shadow:0 0 25px #c55b8b66;
+}
+section{padding:75px 20px;text-align:center}
+h2{font-size:30px;color:#ffd0e2;margin-bottom:20px}
+.message{
+ max-width:650px;margin:auto;line-height:2.5;
+ color:#f9dce8;font-size:18px;
+}
+.gallery{
+ display:grid;grid-template-columns:1fr;
+ gap:35px;max-width:650px;margin:35px auto;
+}
+.photo{
+ position:relative;overflow:hidden;
+ border-radius:22px;
+ border:1px solid #e9a5c266;
+ box-shadow:0 10px 40px #0008;
+ opacity:0;transform:translateY(40px);
+ transition:1s ease;
+}
+.photo.show{opacity:1;transform:translateY(0)}
+.photo img{
+ width:100%;display:block;
+ transition:transform 7s ease;
+}
+.photo:hover img{transform:scale(1.09)}
+.photo span{
+ display:block;padding:17px;
+ background:#291525;color:#ffd3e4;font-size:17px;
+}
+.quote{
+ background:linear-gradient(135deg,#311326,#190d19);
+ border-radius:25px;padding:35px 22px;
+ max-width:650px;margin:35px auto;
+ border:1px solid #d98aaf55;
+}
+.quote p{line-height:2.5;font-size:19px;color:#ffe1ec}
+footer{padding:50px 20px;text-align:center;color:#e9a5c3}
+.heartfloat{
+ position:fixed;bottom:-30px;color:#f5a6c7;
+ pointer-events:none;animation:float 7s linear forwards;
+ z-index:5;
+}
+@keyframes float{
+ to{transform:translateY(-110vh) rotate(360deg);opacity:0}
+}
+@keyframes fade{
+ from{opacity:0;transform:translateY(25px)}
+ to{opacity:1;transform:translateY(0)}
+}
+@media(min-width:650px){
+ .gallery{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+
+<body>
+
+<div id="lock">
+ <div class="lockbox">
+  <div class="heart">♥</div>
+  <h1>فيه حكاية مستنياك</h1>
+  <p>بعض الذكريات ليها باب واحد بس ❤️</p>
+  <p>ادخل الباسورد عشان نبدأ حكايتنا</p>
+  <input id="pass" type="password" inputmode="numeric"
+   maxlength="4" placeholder="••••">
+  <button id="unlock" onclick="unlockSite()">افتح الحكاية ❤️</button>
+  <div id="error">الباسورد مش صحيح.. جرب تاني ❤️</div>
+ </div>
+</div>
+
+<div id="site">
+
+<audio id="song" loop preload="auto">
+ <source src="https://raw.githubusercontent.com/empiresilver39-afk/-/refs/heads/main/12.Khaleny_Zekra%202.mp3" type="audio/mpeg">
+</audio>
+
+<div class="hero">
+ <div class="hero-content">
+  <div class="small">A STORY THAT NEVER ENDS ♡</div>
+  <h1>خليني ذكرى جميلة عندك ❤️</h1>
+  <div class="line"></div>
+  <p>
+   في حاجات في حياتنا متتخططش...<br>
+   وفي ناس بنقابلها بالصدفة،<br>
+   بس بتبقى أجمل صدفة حصلتلنا.
+  </p>
+  <button onclick="startStory()">ابدأ حكايتنا ❤️</button>
+ </div>
+</div>
+
+<section>
+ <h2>يمكن دي مجرد صور...</h2>
+ <div class="message">
+  بس بالنسبالي كل صورة فيهم حكاية،
+  وكل لحظة فيهم ليها إحساس مختلف.
+  <br>
+  مش مهم عرفنا بعض إزاي،
+  المهم إن وجودك بقى جزء جميل من أيامي.
+ </div>
+</section>
+
+<section>
+ <h2>تفاصيل صغيرة.. وذكريات كبيرة</h2>
+ <div class="gallery">
+
+  <div class="photo">
+   <img src="https://i.ibb.co/HTBgnyNG/IMG-7689.jpg" alt="ذكرى جميلة">
+   <span>في صور بتفكرنا بإحساس مش بيتنسي ❤️</span>
+  </div>
+
+  <div class="photo">
+   <img src="https://i.ibb.co/Mxqb30CM/IMG-7687.jpg" alt="لحظة جميلة">
+   <span>أجمل التفاصيل هي اللي بنعيشها سوا</span>
+  </div>
+
+ </div>
+</section>
+
+<section>
+ <div class="quote">
+  <h2>عارف إيه الأجمل؟</h2>
+  <p>
+   إن في حاجات في حياتنا متتخططش،
+   بنقابلها من غير ميعاد،
+   ومن غير ما نكون مستعدين ليها،
+   وفجأة بنلاقيها بقت أغلى حاجة عندنا.
+   <br><br>
+   ويمكن مش عارفين بكرة مخبيلنا إيه،
+   بس نفسي كل ما تفتكري الأيام دي
+   تبتسمي وتفتكري إن كان فيه حد
+   شايف وجودك أجمل صدفة في حياته.
+  </p>
+ </div>
+</section>
+
+<footer>
+ <h2>خليني ذكرى جميلة عندك ❤️</h2>
+ <p>بعض الحكايات ملهاش نهاية... بتفضل عايشة جوانا.</p>
+ <div style="margin-top:20px">Made with love ♡</div>
+</footer>
+
+</div>
+
+<script>
+function unlockSite(){
+ const pass=document.getElementById('pass');
+ if(pass.value==='2396'){
+  document.getElementById('lock').style.display='none';
+  document.getElementById('site').style.display='block';
+  document.body.style.overflowX='hidden';
+ }else{
+  document.getElementById('error').style.display='block';
+  pass.value='';
+ }
+}
+document.getElementById('pass').addEventListener('keydown',e=>{
+ if(e.key==='Enter')unlockSite();
+});
+
+function startStory(){
+ const song=document.getElementById('song');
+ song.play().catch(()=>{});
+ document.querySelectorAll('.photo').forEach((p,i)=>{
+  setTimeout(()=>p.classList.add('show'),i*500);
+ });
+ document.querySelector('.gallery').scrollIntoView({behavior:'smooth'});
+}
+
+const observer=new IntersectionObserver(entries=>{
+ entries.forEach(entry=>{
+  if(entry.isIntersecting)entry.target.classList.add('show');
+ });
+},{threshold:.15});
+document.querySelectorAll('.photo').forEach(p=>observer.observe(p));
+
+function makeHeart(){
+ const h=document.createElement('div');
+ h.className='heartfloat';
+ h.textContent=Math.random()>.5?'♥':'♡';
+ h.style.left=Math.random()*100+'vw';
+ h.style.fontSize=(12+Math.random()*20)+'px';
+ h.style.animationDuration=(5+Math.random()*5)+'s';
+ document.body.appendChild(h);
+ setTimeout(()=>h.remove(),10000);
+}
+setInterval(makeHeart,800);
+</script>
+</body>
+</html>
